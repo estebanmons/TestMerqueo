@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9255E0825A56167003E35AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E0725A56167003E35AB /* AppDelegate.swift */; };
+		F9255E0A25A56167003E35AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E0925A56167003E35AB /* SceneDelegate.swift */; };
+		F9255E0C25A56167003E35AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E0B25A56167003E35AB /* ViewController.swift */; };
+		F9255E0F25A56167003E35AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9255E0D25A56167003E35AB /* Main.storyboard */; };
+		F9255E1125A56168003E35AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9255E1025A56168003E35AB /* Assets.xcassets */; };
+		F9255E1425A56168003E35AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9255E1225A56168003E35AB /* LaunchScreen.storyboard */; };
+		F9255E1F25A56168003E35AB /* TestMerqueoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E1E25A56168003E35AB /* TestMerqueoTests.swift */; };
+		F9255E2A25A56168003E35AB /* TestMerqueoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9255E1B25A56168003E35AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9255DFC25A56167003E35AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9255E0325A56167003E35AB;
+			remoteInfo = TestMerqueo;
+		};
+		F9255E2625A56168003E35AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9255DFC25A56167003E35AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9255E0325A56167003E35AB;
+			remoteInfo = TestMerqueo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9255E0425A56167003E35AB /* TestMerqueo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMerqueo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9255E0725A56167003E35AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9255E0925A56167003E35AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F9255E0B25A56167003E35AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9255E0E25A56167003E35AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9255E1025A56168003E35AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9255E1325A56168003E35AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9255E1525A56168003E35AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMerqueoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9255E1E25A56168003E35AB /* TestMerqueoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMerqueoTests.swift; sourceTree = "<group>"; };
+		F9255E2025A56168003E35AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9255E2525A56168003E35AB /* TestMerqueoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMerqueoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMerqueoUITests.swift; sourceTree = "<group>"; };
+		F9255E2B25A56168003E35AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9255E0125A56167003E35AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9255E1725A56168003E35AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9255E2225A56168003E35AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9255DFB25A56167003E35AB = {
+			isa = PBXGroup;
+			children = (
+				F9255E0625A56167003E35AB /* TestMerqueo */,
+				F9255E1D25A56168003E35AB /* TestMerqueoTests */,
+				F9255E2825A56168003E35AB /* TestMerqueoUITests */,
+				F9255E0525A56167003E35AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9255E0525A56167003E35AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E0425A56167003E35AB /* TestMerqueo.app */,
+				F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */,
+				F9255E2525A56168003E35AB /* TestMerqueoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9255E0625A56167003E35AB /* TestMerqueo */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E0725A56167003E35AB /* AppDelegate.swift */,
+				F9255E0925A56167003E35AB /* SceneDelegate.swift */,
+				F9255E0B25A56167003E35AB /* ViewController.swift */,
+				F9255E0D25A56167003E35AB /* Main.storyboard */,
+				F9255E1025A56168003E35AB /* Assets.xcassets */,
+				F9255E1225A56168003E35AB /* LaunchScreen.storyboard */,
+				F9255E1525A56168003E35AB /* Info.plist */,
+			);
+			path = TestMerqueo;
+			sourceTree = "<group>";
+		};
+		F9255E1D25A56168003E35AB /* TestMerqueoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E1E25A56168003E35AB /* TestMerqueoTests.swift */,
+				F9255E2025A56168003E35AB /* Info.plist */,
+			);
+			path = TestMerqueoTests;
+			sourceTree = "<group>";
+		};
+		F9255E2825A56168003E35AB /* TestMerqueoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */,
+				F9255E2B25A56168003E35AB /* Info.plist */,
+			);
+			path = TestMerqueoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9255E0325A56167003E35AB /* TestMerqueo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9255E2E25A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueo" */;
+			buildPhases = (
+				F9255E0025A56167003E35AB /* Sources */,
+				F9255E0125A56167003E35AB /* Frameworks */,
+				F9255E0225A56167003E35AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestMerqueo;
+			productName = TestMerqueo;
+			productReference = F9255E0425A56167003E35AB /* TestMerqueo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9255E1925A56168003E35AB /* TestMerqueoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9255E3125A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueoTests" */;
+			buildPhases = (
+				F9255E1625A56168003E35AB /* Sources */,
+				F9255E1725A56168003E35AB /* Frameworks */,
+				F9255E1825A56168003E35AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9255E1C25A56168003E35AB /* PBXTargetDependency */,
+			);
+			name = TestMerqueoTests;
+			productName = TestMerqueoTests;
+			productReference = F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9255E2425A56168003E35AB /* TestMerqueoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9255E3425A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueoUITests" */;
+			buildPhases = (
+				F9255E2125A56168003E35AB /* Sources */,
+				F9255E2225A56168003E35AB /* Frameworks */,
+				F9255E2325A56168003E35AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9255E2725A56168003E35AB /* PBXTargetDependency */,
+			);
+			name = TestMerqueoUITests;
+			productName = TestMerqueoUITests;
+			productReference = F9255E2525A56168003E35AB /* TestMerqueoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9255DFC25A56167003E35AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					F9255E0325A56167003E35AB = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					F9255E1925A56168003E35AB = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = F9255E0325A56167003E35AB;
+					};
+					F9255E2425A56168003E35AB = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = F9255E0325A56167003E35AB;
+					};
+				};
+			};
+			buildConfigurationList = F9255DFF25A56167003E35AB /* Build configuration list for PBXProject "TestMerqueo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9255DFB25A56167003E35AB;
+			productRefGroup = F9255E0525A56167003E35AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9255E0325A56167003E35AB /* TestMerqueo */,
+				F9255E1925A56168003E35AB /* TestMerqueoTests */,
+				F9255E2425A56168003E35AB /* TestMerqueoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9255E0225A56167003E35AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9255E1425A56168003E35AB /* LaunchScreen.storyboard in Resources */,
+				F9255E1125A56168003E35AB /* Assets.xcassets in Resources */,
+				F9255E0F25A56167003E35AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9255E1825A56168003E35AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9255E2325A56168003E35AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9255E0025A56167003E35AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9255E0C25A56167003E35AB /* ViewController.swift in Sources */,
+				F9255E0825A56167003E35AB /* AppDelegate.swift in Sources */,
+				F9255E0A25A56167003E35AB /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9255E1625A56168003E35AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9255E1F25A56168003E35AB /* TestMerqueoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9255E2125A56168003E35AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9255E2A25A56168003E35AB /* TestMerqueoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9255E1C25A56168003E35AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9255E0325A56167003E35AB /* TestMerqueo */;
+			targetProxy = F9255E1B25A56168003E35AB /* PBXContainerItemProxy */;
+		};
+		F9255E2725A56168003E35AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9255E0325A56167003E35AB /* TestMerqueo */;
+			targetProxy = F9255E2625A56168003E35AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9255E0D25A56167003E35AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9255E0E25A56167003E35AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9255E1225A56168003E35AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9255E1325A56168003E35AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9255E2C25A56168003E35AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9255E2D25A56168003E35AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9255E2F25A56168003E35AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX27675N9Y;
+				INFOPLIST_FILE = TestMerqueo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9255E3025A56168003E35AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX27675N9Y;
+				INFOPLIST_FILE = TestMerqueo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9255E3225A56168003E35AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX27675N9Y;
+				INFOPLIST_FILE = TestMerqueoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMerqueo.app/TestMerqueo";
+			};
+			name = Debug;
+		};
+		F9255E3325A56168003E35AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX27675N9Y;
+				INFOPLIST_FILE = TestMerqueoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMerqueo.app/TestMerqueo";
+			};
+			name = Release;
+		};
+		F9255E3525A56168003E35AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX27675N9Y;
+				INFOPLIST_FILE = TestMerqueoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestMerqueo;
+			};
+			name = Debug;
+		};
+		F9255E3625A56168003E35AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX27675N9Y;
+				INFOPLIST_FILE = TestMerqueoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestMerqueo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9255DFF25A56167003E35AB /* Build configuration list for PBXProject "TestMerqueo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9255E2C25A56168003E35AB /* Debug */,
+				F9255E2D25A56168003E35AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9255E2E25A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9255E2F25A56168003E35AB /* Debug */,
+				F9255E3025A56168003E35AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9255E3125A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9255E3225A56168003E35AB /* Debug */,
+				F9255E3325A56168003E35AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9255E3425A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9255E3525A56168003E35AB /* Debug */,
+				F9255E3625A56168003E35AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9255DFC25A56167003E35AB /* Project object */;
+}
