@@ -99,13 +99,9 @@
 		F9255E0625A56167003E35AB /* TestMerqueo */ = {
 			isa = PBXGroup;
 			children = (
-				F9255E0725A56167003E35AB /* AppDelegate.swift */,
-				F9255E0925A56167003E35AB /* SceneDelegate.swift */,
-				F9255E0B25A56167003E35AB /* ViewController.swift */,
-				F9255E0D25A56167003E35AB /* Main.storyboard */,
-				F9255E1025A56168003E35AB /* Assets.xcassets */,
-				F9255E1225A56168003E35AB /* LaunchScreen.storyboard */,
-				F9255E1525A56168003E35AB /* Info.plist */,
+				F9255E4325A56B78003E35AB /* Implementation */,
+				F9255E4425A56BFC003E35AB /* SupportFiles */,
+				F9255E4F25A56F0B003E35AB /* Config */,
 			);
 			path = TestMerqueo;
 			sourceTree = "<group>";
@@ -126,6 +122,82 @@
 				F9255E2B25A56168003E35AB /* Info.plist */,
 			);
 			path = TestMerqueoUITests;
+			sourceTree = "<group>";
+		};
+		F9255E4325A56B78003E35AB /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E4825A56CEB003E35AB /* Movies */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		F9255E4425A56BFC003E35AB /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E0725A56167003E35AB /* AppDelegate.swift */,
+				F9255E0925A56167003E35AB /* SceneDelegate.swift */,
+				F9255E1225A56168003E35AB /* LaunchScreen.storyboard */,
+				F9255E1025A56168003E35AB /* Assets.xcassets */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		F9255E4825A56CEB003E35AB /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E4925A56CFB003E35AB /* View */,
+				F9255E4B25A56DB6003E35AB /* ViewController */,
+				F9255E4A25A56D3F003E35AB /* ViewModel */,
+				F9255E4C25A56DC2003E35AB /* BL */,
+				F9255E4E25A56DF6003E35AB /* Repository */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		F9255E4925A56CFB003E35AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E0D25A56167003E35AB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9255E4A25A56D3F003E35AB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F9255E4B25A56DB6003E35AB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E0B25A56167003E35AB /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F9255E4C25A56DC2003E35AB /* BL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BL;
+			sourceTree = "<group>";
+		};
+		F9255E4E25A56DF6003E35AB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F9255E4F25A56F0B003E35AB /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E1525A56168003E35AB /* Info.plist */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +510,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SX27675N9Y;
-				INFOPLIST_FILE = TestMerqueo/Info.plist;
+				INFOPLIST_FILE = TestMerqueo/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SX27675N9Y;
-				INFOPLIST_FILE = TestMerqueo/Info.plist;
+				INFOPLIST_FILE = TestMerqueo/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
