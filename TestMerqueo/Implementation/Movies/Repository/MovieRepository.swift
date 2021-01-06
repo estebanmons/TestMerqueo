@@ -15,7 +15,7 @@ class MovieRepository {
     
     func getPopularMovies() throws -> Observable<PopularMoviesResponse> {
         
-        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)/movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=1")!)
+        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=1")!)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

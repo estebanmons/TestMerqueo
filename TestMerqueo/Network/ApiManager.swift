@@ -69,10 +69,3 @@ public class ApiManagerObservable {
         }
     }
 }
-
-enum RequestError: Error {
-    case unknownError
-    case connectionError
-    case authorizationError
-    case serverError
-}

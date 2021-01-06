@@ -17,6 +17,7 @@ class PopularMoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        bindViewModel()
         movieViewModel.getPopularNovies()
         
     }

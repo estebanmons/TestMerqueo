@@ -13,3 +13,10 @@ struct Constants {
     static let apiKey = "674d230726a9141a5e4cb7090e79aa8f"
     
 }
+
+enum RequestError: Error {
+    case unknownError
+    case connectionError
+    case authorizationError
+    case serverError
+}
