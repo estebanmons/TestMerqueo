@@ -3,18 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		F9255E0825A56167003E35AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E0725A56167003E35AB /* AppDelegate.swift */; };
 		F9255E0A25A56167003E35AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E0925A56167003E35AB /* SceneDelegate.swift */; };
-		F9255E0C25A56167003E35AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E0B25A56167003E35AB /* ViewController.swift */; };
+		F9255E0C25A56167003E35AB /* PopularMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E0B25A56167003E35AB /* PopularMoviesViewController.swift */; };
 		F9255E0F25A56167003E35AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9255E0D25A56167003E35AB /* Main.storyboard */; };
 		F9255E1125A56168003E35AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9255E1025A56168003E35AB /* Assets.xcassets */; };
 		F9255E1425A56168003E35AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9255E1225A56168003E35AB /* LaunchScreen.storyboard */; };
 		F9255E1F25A56168003E35AB /* TestMerqueoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E1E25A56168003E35AB /* TestMerqueoTests.swift */; };
 		F9255E2A25A56168003E35AB /* TestMerqueoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */; };
+		F9255E5B25A570BE003E35AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E5A25A570BE003E35AB /* Constants.swift */; };
+		F9255E8825A57F65003E35AB /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E8725A57F65003E35AB /* MovieResponse.swift */; };
+		F9255E9125A58600003E35AB /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E9025A58600003E35AB /* ApiManager.swift */; };
+		F9255E9925A58AD7003E35AB /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E9825A58AD7003E35AB /* MovieRepository.swift */; };
+		F9255E9E25A58C88003E35AB /* MovieBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E9D25A58C88003E35AB /* MovieBL.swift */; };
+		F9255EA325A58CCF003E35AB /* MovieBLImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255EA225A58CCF003E35AB /* MovieBLImplementation.swift */; };
+		F9255EA825A58EEC003E35AB /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255EA725A58EEC003E35AB /* MovieViewModel.swift */; };
+		F9D5A90A25A595E5009D628F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90925A595E5009D628F /* RxSwift */; };
+		F9D5A90C25A595E5009D628F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90B25A595E5009D628F /* RxTest */; };
+		F9D5A90E25A595E5009D628F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90D25A595E5009D628F /* RxRelay */; };
+		F9D5A91025A595E5009D628F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90F25A595E5009D628F /* RxCocoa */; };
+		F9D5A91225A595E5009D628F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A91125A595E5009D628F /* RxBlocking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +50,7 @@
 		F9255E0425A56167003E35AB /* TestMerqueo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMerqueo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9255E0725A56167003E35AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9255E0925A56167003E35AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F9255E0B25A56167003E35AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9255E0B25A56167003E35AB /* PopularMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMoviesViewController.swift; sourceTree = "<group>"; };
 		F9255E0E25A56167003E35AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9255E1025A56168003E35AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9255E1325A56168003E35AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +61,13 @@
 		F9255E2525A56168003E35AB /* TestMerqueoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMerqueoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMerqueoUITests.swift; sourceTree = "<group>"; };
 		F9255E2B25A56168003E35AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9255E5A25A570BE003E35AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9255E8725A57F65003E35AB /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		F9255E9025A58600003E35AB /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F9255E9825A58AD7003E35AB /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		F9255E9D25A58C88003E35AB /* MovieBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBL.swift; sourceTree = "<group>"; };
+		F9255EA225A58CCF003E35AB /* MovieBLImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBLImplementation.swift; sourceTree = "<group>"; };
+		F9255EA725A58EEC003E35AB /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D5A91025A595E5009D628F /* RxCocoa in Frameworks */,
+				F9D5A90E25A595E5009D628F /* RxRelay in Frameworks */,
+				F9D5A90A25A595E5009D628F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9D5A90C25A595E5009D628F /* RxTest in Frameworks */,
+				F9D5A91225A595E5009D628F /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +123,12 @@
 		F9255E0625A56167003E35AB /* TestMerqueo */ = {
 			isa = PBXGroup;
 			children = (
+				F9255E8625A57F40003E35AB /* Models */,
 				F9255E4325A56B78003E35AB /* Implementation */,
+				F9255E8F25A584B4003E35AB /* Network */,
 				F9255E4425A56BFC003E35AB /* SupportFiles */,
 				F9255E4F25A56F0B003E35AB /* Config */,
+				F9255E5925A57082003E35AB /* Utils */,
 			);
 			path = TestMerqueo;
 			sourceTree = "<group>";
@@ -166,6 +193,7 @@
 		F9255E4A25A56D3F003E35AB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F9255EA725A58EEC003E35AB /* MovieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -173,7 +201,7 @@
 		F9255E4B25A56DB6003E35AB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				F9255E0B25A56167003E35AB /* ViewController.swift */,
+				F9255E0B25A56167003E35AB /* PopularMoviesViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -181,6 +209,8 @@
 		F9255E4C25A56DC2003E35AB /* BL */ = {
 			isa = PBXGroup;
 			children = (
+				F9255E9D25A58C88003E35AB /* MovieBL.swift */,
+				F9255EA225A58CCF003E35AB /* MovieBLImplementation.swift */,
 			);
 			path = BL;
 			sourceTree = "<group>";
@@ -188,6 +218,7 @@
 		F9255E4E25A56DF6003E35AB /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				F9255E9825A58AD7003E35AB /* MovieRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -198,6 +229,30 @@
 				F9255E1525A56168003E35AB /* Info.plist */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		F9255E5925A57082003E35AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E5A25A570BE003E35AB /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F9255E8625A57F40003E35AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E8725A57F65003E35AB /* MovieResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F9255E8F25A584B4003E35AB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F9255E9025A58600003E35AB /* ApiManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +271,11 @@
 			dependencies = (
 			);
 			name = TestMerqueo;
+			packageProductDependencies = (
+				F9D5A90925A595E5009D628F /* RxSwift */,
+				F9D5A90D25A595E5009D628F /* RxRelay */,
+				F9D5A90F25A595E5009D628F /* RxCocoa */,
+			);
 			productName = TestMerqueo;
 			productReference = F9255E0425A56167003E35AB /* TestMerqueo.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +294,10 @@
 				F9255E1C25A56168003E35AB /* PBXTargetDependency */,
 			);
 			name = TestMerqueoTests;
+			packageProductDependencies = (
+				F9D5A90B25A595E5009D628F /* RxTest */,
+				F9D5A91125A595E5009D628F /* RxBlocking */,
+			);
 			productName = TestMerqueoTests;
 			productReference = F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -287,6 +351,9 @@
 				Base,
 			);
 			mainGroup = F9255DFB25A56167003E35AB;
+			packageReferences = (
+				F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = F9255E0525A56167003E35AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -330,9 +397,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9255E0C25A56167003E35AB /* ViewController.swift in Sources */,
+				F9255E0C25A56167003E35AB /* PopularMoviesViewController.swift in Sources */,
+				F9255EA825A58EEC003E35AB /* MovieViewModel.swift in Sources */,
+				F9255E8825A57F65003E35AB /* MovieResponse.swift in Sources */,
 				F9255E0825A56167003E35AB /* AppDelegate.swift in Sources */,
 				F9255E0A25A56167003E35AB /* SceneDelegate.swift in Sources */,
+				F9255E9925A58AD7003E35AB /* MovieRepository.swift in Sources */,
+				F9255E9125A58600003E35AB /* ApiManager.swift in Sources */,
+				F9255E9E25A58C88003E35AB /* MovieBL.swift in Sources */,
+				F9255E5B25A570BE003E35AB /* Constants.swift in Sources */,
+				F9255EA325A58CCF003E35AB /* MovieBLImplementation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +584,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SX27675N9Y;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = TestMerqueo/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,6 +604,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SX27675N9Y;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				INFOPLIST_FILE = TestMerqueo/Config/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -665,6 +741,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9D5A90925A595E5009D628F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F9D5A90B25A595E5009D628F /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		F9D5A90D25A595E5009D628F /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F9D5A90F25A595E5009D628F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F9D5A91125A595E5009D628F /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9255DFC25A56167003E35AB /* Project object */;
 }
