@@ -22,4 +22,22 @@ class MovieRepository {
         return requestObservable.requestAPI(request: request)
     }
     
+    func getMovieDetail(_ movieId: Int) throws -> Observable<MovieDetailResponse> {
+        
+        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/\(movieId)?api_key=\(Constants.apiKey)&language=en-US")!)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        return requestObservable.requestAPI(request: request)
+    }
+    
+    func getMovieCredits(_ movieId: Int) throws -> Observable<MovieCreditsResponse> {
+        
+        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/\(movieId)/credits?api_key=\(Constants.apiKey)&language=en-US")!)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        return requestObservable.requestAPI(request: request)
+    }
+    
 }

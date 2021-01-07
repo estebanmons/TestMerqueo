@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class PopularMoviesViewController: UIViewController {
+class PopularMoviesViewController: BaseViewController {
     
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     
@@ -31,6 +31,12 @@ class PopularMoviesViewController: UIViewController {
         bindViewModel()
         movieViewModel.getPopularNovies()
         
+    }
+    
+    /// Init view controller
+    static func storyboardInstance() -> PopularMoviesViewController {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyBoard.instantiateViewController(withIdentifier: "PopularMoviesViewController") as! PopularMoviesViewController
     }
     
     func bindViewModel() {
@@ -55,6 +61,15 @@ class PopularMoviesViewController: UIViewController {
                     }
                     
                 }
+            }).disposed(by: disposeBag)
+        
+        movieViewModel.output.errorMessage.asObservable()
+            .subscribe(onNext: { errorMessage in
+                
+                if let errorMessageSafe = errorMessage {
+                    self.showAlert(title: "Advertencia", message: errorMessageSafe)
+                }
+                
             }).disposed(by: disposeBag)
         
         
@@ -83,6 +98,14 @@ class PopularMoviesViewController: UIViewController {
         moviesCollectionView.showsVerticalScrollIndicator = false
         
     }
+    
+    func goToMovieDetailView(_ idMovie: Int) {
+        
+        let movieDetailView = MovieDetailViewController.storyboardInstance()
+        movieDetailView.idMovie = idMovie
+        self.present(movieDetailView, animated: true, completion: nil)
+        
+    }
 
 
 }
@@ -106,6 +129,12 @@ extension PopularMoviesViewController: UICollectionViewDelegate, UICollectionVie
         
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let idMovie = movies[indexPath.row].id {
+            self.goToMovieDetailView(idMovie)
+        }
     }
     
     

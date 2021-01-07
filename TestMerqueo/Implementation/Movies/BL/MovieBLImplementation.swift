@@ -22,5 +22,19 @@ class MovieBLImplementation : MovieBL {
             return Observable.just(response)
         })
     }
+    
+    func getMovieDetail(_ movieId: Int) throws -> Observable<MovieDetailResponse> {
+        return try movieRepository.getMovieDetail(movieId).asObservable().flatMap({
+            response -> Observable<MovieDetailResponse> in
+            return Observable.just(response)
+        })
+    }
+    
+    func getMovieCredits(_ movieId: Int) throws -> Observable<MovieCreditsResponse> {
+        return try movieRepository.getMovieCredits(movieId).asObservable().flatMap({
+            response -> Observable<MovieCreditsResponse> in
+            return Observable.just(response)
+        })
+    }
 
 }
