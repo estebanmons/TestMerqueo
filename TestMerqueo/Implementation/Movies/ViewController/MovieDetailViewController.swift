@@ -23,6 +23,8 @@ class MovieDetailViewController: BaseViewController {
     @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var revenueLabel: UILabel!
     @IBOutlet weak var webMovieButton: UIButton!
+    @IBOutlet weak var noCastLabel: UILabel!
+    
     
     
     let movieViewModel = MovieViewModel()
@@ -69,40 +71,8 @@ class MovieDetailViewController: BaseViewController {
         
         movieViewModel.output.movieCredits.asObservable()
             .subscribe(onNext: { movieCreditsResponse in
-                
                 if let movieCreditsSafe = movieCreditsResponse {
-                    
-                    if let castSafe = movieCreditsSafe.cast {
-                        
-                        if castSafe.count > 20 {
-                            self.cast = Array(castSafe.prefix(20))
-                        } else {
-                            self.cast = castSafe
-                        }
-                        
-                        DispatchQueue.main.async {
-                            self.setCollectionView()
-                        }
-                    }
-                    
-                    if let crewSafe = movieCreditsSafe.crew {
-                        
-                        let director =  crewSafe.filter{ $0.job == "Director" }.first
-                        
-                        if let imageUrlString = director?.profilePath , let imageUrl = URL(string: "\(Constants.baseImageUrl)\(imageUrlString)") {
-                            self.directorImageView.sd_setImage(with: imageUrl, completed: nil)
-                        } else {
-                            DispatchQueue.main.async {
-                                self.directorImageView.image = #imageLiteral(resourceName: "ic_no_image")
-                            }
-                        }
-                        
-                        DispatchQueue.main.async {
-                            self.directorLabel.text = director?.name
-                        }
-                        
-                    }
-                    
+                    self.setMovieCredits(movieCreditsSafe)
                 }
                 
             }).disposed(by: disposeBag)
@@ -188,6 +158,45 @@ class MovieDetailViewController: BaseViewController {
         
     }
     
+    func setMovieCredits(_ movieCredits : MovieCreditsResponse) {
+        
+        if let castSafe = movieCredits.cast, castSafe.count > 0 {
+            
+            if castSafe.count > 20 {
+                self.cast = Array(castSafe.prefix(20))
+            } else {
+                self.cast = castSafe
+            }
+            
+            DispatchQueue.main.async {
+                self.setCollectionView()
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.noCastLabel.isHidden = false
+            }
+        }
+        
+        if let crewSafe = movieCredits.crew {
+            
+            let director =  crewSafe.filter{ $0.job == "Director" }.first
+            
+            if let imageUrlString = director?.profilePath , let imageUrl = URL(string: "\(Constants.baseImageUrl)\(imageUrlString)") {
+                self.directorImageView.sd_setImage(with: imageUrl, completed: nil)
+            } else {
+                DispatchQueue.main.async {
+                    self.directorImageView.image = #imageLiteral(resourceName: "ic_no_image")
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self.directorLabel.text = director?.name
+            }
+            
+        }
+        
+    }
+    
     
     
     @IBAction func goToWebAction(_ sender: UIButton) {
@@ -196,7 +205,9 @@ class MovieDetailViewController: BaseViewController {
             
             let vc = SFSafariViewController(url: url)
             
-            present(vc, animated: true)
+            vc.modalPresentationStyle = .overCurrentContext
+            
+            self.present(vc, animated: true)
         }
         
     }
