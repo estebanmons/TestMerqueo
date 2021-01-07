@@ -106,6 +106,14 @@ class PopularMoviesViewController: BaseViewController {
         self.present(movieDetailView, animated: true, completion: nil)
         
     }
+    
+    @IBAction func searchMovieAction(_ sender: UIBarButtonItem) {
+        
+        let searchMovieView = SearchMovieViewController.storyboardInstance()
+        self.navigationController?.pushViewController(searchMovieView, animated: true)
+        
+    }
+    
 
 
 }

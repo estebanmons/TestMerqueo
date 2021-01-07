@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198390AA958E58EC58F27802 /* Pods_TestMerqueoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 020EC0BE038225481AB3A0E5 /* Pods_TestMerqueoTests.framework */; };
+		4881F30218F9BECD736AD89C /* Pods_TestMerqueo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D9DA76564B54C2151B45D /* Pods_TestMerqueo.framework */; };
+		F912797C25A7B7300066E014 /* SearchMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F912797B25A7B7300066E014 /* SearchMovieViewController.swift */; };
 		F918AEA125A6C043002F33FD /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918AE9F25A6C043002F33FD /* CastCollectionViewCell.swift */; };
 		F918AEA225A6C043002F33FD /* CastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F918AEA025A6C043002F33FD /* CastCollectionViewCell.xib */; };
 		F918AEAB25A6D264002F33FD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F918AEAA25A6D264002F33FD /* BaseViewController.swift */; };
@@ -29,7 +32,6 @@
 		F960E6F625A698A00018C3CA /* MovieCreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F960E6F525A698A00018C3CA /* MovieCreditsResponse.swift */; };
 		F9CCB4F725A63E9E00E54BC2 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CCB4F525A63E9E00E54BC2 /* MovieCollectionViewCell.swift */; };
 		F9CCB4F825A63E9E00E54BC2 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9CCB4F625A63E9E00E54BC2 /* MovieCollectionViewCell.xib */; };
-		F9E4D3C225A7779700BD1B90 /* TestMerqueoPackage in Frameworks */ = {isa = PBXBuildFile; productRef = F9E4D3C125A7779700BD1B90 /* TestMerqueoPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020EC0BE038225481AB3A0E5 /* Pods_TestMerqueoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMerqueoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		407AB55FFD8C085B3FED6589 /* Pods-TestMerqueoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMerqueoTests.release.xcconfig"; path = "Target Support Files/Pods-TestMerqueoTests/Pods-TestMerqueoTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F2162B2FBB6A6E93169BF2A /* Pods-TestMerqueo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMerqueo.release.xcconfig"; path = "Target Support Files/Pods-TestMerqueo/Pods-TestMerqueo.release.xcconfig"; sourceTree = "<group>"; };
+		69FBF8940ED4EDD2C634D5A4 /* Pods-TestMerqueo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMerqueo.debug.xcconfig"; path = "Target Support Files/Pods-TestMerqueo/Pods-TestMerqueo.debug.xcconfig"; sourceTree = "<group>"; };
+		F06D9DA76564B54C2151B45D /* Pods_TestMerqueo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMerqueo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23B1579EB086124139A4CD1 /* Pods-TestMerqueoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMerqueoTests.debug.xcconfig"; path = "Target Support Files/Pods-TestMerqueoTests/Pods-TestMerqueoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F912797B25A7B7300066E014 /* SearchMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieViewController.swift; sourceTree = "<group>"; };
 		F918AE9F25A6C043002F33FD /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
 		F918AEA025A6C043002F33FD /* CastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastCollectionViewCell.xib; sourceTree = "<group>"; };
 		F918AEAA25A6D264002F33FD /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +78,6 @@
 		F960E6F525A698A00018C3CA /* MovieCreditsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsResponse.swift; sourceTree = "<group>"; };
 		F9CCB4F525A63E9E00E54BC2 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9CCB4F625A63E9E00E54BC2 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
-		F9E4D3B325A7722A00BD1B90 /* TestMerqueoPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestMerqueoPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9E4D3C225A7779700BD1B90 /* TestMerqueoPackage in Frameworks */,
+				4881F30218F9BECD736AD89C /* Pods_TestMerqueo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +93,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198390AA958E58EC58F27802 /* Pods_TestMerqueoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5539D75D91349DE686F2BFDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69FBF8940ED4EDD2C634D5A4 /* Pods-TestMerqueo.debug.xcconfig */,
+				5F2162B2FBB6A6E93169BF2A /* Pods-TestMerqueo.release.xcconfig */,
+				F23B1579EB086124139A4CD1 /* Pods-TestMerqueoTests.debug.xcconfig */,
+				407AB55FFD8C085B3FED6589 /* Pods-TestMerqueoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F912797525A7B51D0066E014 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F9CCB4F525A63E9E00E54BC2 /* MovieCollectionViewCell.swift */,
+				F9CCB4F625A63E9E00E54BC2 /* MovieCollectionViewCell.xib */,
+				F918AE9F25A6C043002F33FD /* CastCollectionViewCell.swift */,
+				F918AEA025A6C043002F33FD /* CastCollectionViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F918AEA925A6D247002F33FD /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,11 +133,11 @@
 		F9255DFB25A56167003E35AB = {
 			isa = PBXGroup;
 			children = (
-				F9E4D3B325A7722A00BD1B90 /* TestMerqueoPackage */,
 				F9255E0625A56167003E35AB /* TestMerqueo */,
 				F9255E1D25A56168003E35AB /* TestMerqueoTests */,
 				F9255E0525A56167003E35AB /* Products */,
 				F9E4D3AF25A770D400BD1B90 /* Frameworks */,
+				5539D75D91349DE686F2BFDA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,10 +225,8 @@
 			children = (
 				F9255E0B25A56167003E35AB /* PopularMoviesViewController.swift */,
 				F960E6EB25A68BE10018C3CA /* MovieDetailViewController.swift */,
-				F9CCB4F525A63E9E00E54BC2 /* MovieCollectionViewCell.swift */,
-				F9CCB4F625A63E9E00E54BC2 /* MovieCollectionViewCell.xib */,
-				F918AE9F25A6C043002F33FD /* CastCollectionViewCell.swift */,
-				F918AEA025A6C043002F33FD /* CastCollectionViewCell.xib */,
+				F912797B25A7B7300066E014 /* SearchMovieViewController.swift */,
+				F912797525A7B51D0066E014 /* Cells */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -256,6 +285,8 @@
 		F9E4D3AF25A770D400BD1B90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F06D9DA76564B54C2151B45D /* Pods_TestMerqueo.framework */,
+				020EC0BE038225481AB3A0E5 /* Pods_TestMerqueoTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -267,18 +298,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9255E2E25A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueo" */;
 			buildPhases = (
+				C811E61ED83A046C6A364718 /* [CP] Check Pods Manifest.lock */,
 				F9255E0025A56167003E35AB /* Sources */,
 				F9255E0125A56167003E35AB /* Frameworks */,
 				F9255E0225A56167003E35AB /* Resources */,
+				FD06DE4D81051CE62D1D4486 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = TestMerqueo;
-			packageProductDependencies = (
-				F9E4D3C125A7779700BD1B90 /* TestMerqueoPackage */,
-			);
 			productName = TestMerqueo;
 			productReference = F9255E0425A56167003E35AB /* TestMerqueo.app */;
 			productType = "com.apple.product-type.application";
@@ -287,9 +317,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9255E3125A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueoTests" */;
 			buildPhases = (
+				E3479A2463EFAB10D50F3C07 /* [CP] Check Pods Manifest.lock */,
 				F9255E1625A56168003E35AB /* Sources */,
 				F9255E1725A56168003E35AB /* Frameworks */,
 				F9255E1825A56168003E35AB /* Resources */,
+				B15D276FD0CEABD68C6F118E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,8 +329,6 @@
 				F9255E1C25A56168003E35AB /* PBXTargetDependency */,
 			);
 			name = TestMerqueoTests;
-			packageProductDependencies = (
-			);
 			productName = TestMerqueoTests;
 			productReference = F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -330,8 +360,6 @@
 				Base,
 			);
 			mainGroup = F9255DFB25A56167003E35AB;
-			packageReferences = (
-			);
 			productRefGroup = F9255E0525A56167003E35AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -364,6 +392,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B15D276FD0CEABD68C6F118E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMerqueoTests/Pods-TestMerqueoTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMerqueoTests/Pods-TestMerqueoTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestMerqueoTests/Pods-TestMerqueoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C811E61ED83A046C6A364718 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestMerqueo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3479A2463EFAB10D50F3C07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestMerqueoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD06DE4D81051CE62D1D4486 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMerqueo/Pods-TestMerqueo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMerqueo/Pods-TestMerqueo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestMerqueo/Pods-TestMerqueo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9255E0025A56167003E35AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -379,6 +488,7 @@
 				F9255E9925A58AD7003E35AB /* MovieRepository.swift in Sources */,
 				F9255E9125A58600003E35AB /* ApiManager.swift in Sources */,
 				F9255E9E25A58C88003E35AB /* MovieBL.swift in Sources */,
+				F912797C25A7B7300066E014 /* SearchMovieViewController.swift in Sources */,
 				F9CCB4F725A63E9E00E54BC2 /* MovieCollectionViewCell.swift in Sources */,
 				F9255E5B25A570BE003E35AB /* Constants.swift in Sources */,
 				F918AEA125A6C043002F33FD /* CastCollectionViewCell.swift in Sources */,
@@ -546,6 +656,7 @@
 		};
 		F9255E2F25A56168003E35AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69FBF8940ED4EDD2C634D5A4 /* Pods-TestMerqueo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -566,6 +677,7 @@
 		};
 		F9255E3025A56168003E35AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2162B2FBB6A6E93169BF2A /* Pods-TestMerqueo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -586,6 +698,7 @@
 		};
 		F9255E3225A56168003E35AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F23B1579EB086124139A4CD1 /* Pods-TestMerqueoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -608,6 +721,7 @@
 		};
 		F9255E3325A56168003E35AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 407AB55FFD8C085B3FED6589 /* Pods-TestMerqueoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -659,13 +773,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F9E4D3C125A7779700BD1B90 /* TestMerqueoPackage */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TestMerqueoPackage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F9255DFC25A56167003E35AB /* Project object */;
 }

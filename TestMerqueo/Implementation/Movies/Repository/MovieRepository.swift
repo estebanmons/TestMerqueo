@@ -40,4 +40,13 @@ class MovieRepository {
         return requestObservable.requestAPI(request: request)
     }
     
+    func getMovieByWord(_ word: String) throws -> Observable<PopularMoviesResponse> {
+        
+        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)search/movie?api_key=\(Constants.apiKey)&language=en-US&query=\(word)&page=1&include_adult=false")!)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        return requestObservable.requestAPI(request: request)
+    }
+    
 }

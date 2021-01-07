@@ -36,5 +36,12 @@ class MovieBLImplementation : MovieBL {
             return Observable.just(response)
         })
     }
+    
+    func getMovieByWord(_ word: String) throws -> Observable<PopularMoviesResponse> {
+        return try movieRepository.getMovieByWord(word).asObservable().flatMap({
+            response -> Observable<PopularMoviesResponse> in
+            return Observable.just(response)
+        })
+    }
 
 }

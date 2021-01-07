@@ -14,6 +14,11 @@ class MovieViewModel {
     private let disposeBag = DisposeBag()
     private var movieBL : MovieBL
     
+    struct Input {
+        var wordToSearch = BehaviorRelay<String?>(value: nil)
+        var eventSearch = PublishSubject<Void>()
+    }
+    
     struct Output {
         
         var isLoading = BehaviorRelay(value: false)
@@ -26,14 +31,17 @@ class MovieViewModel {
         
     }
     
+    let input: Input
     let output: Output
     
     init() {
+        input = Input()
         output = Output()
         self.movieBL = MovieBLImplementation(movieRepository: MovieRepository())
     }
     
     init(movieBL : MovieBL) {
+        input = Input()
         output = Output()
         self.movieBL = movieBL
     }
@@ -103,6 +111,27 @@ class MovieViewModel {
         }
         
     }
+    
+    func getMovieByWord(_ word: String) {
+        do{
+            try self.movieBL.getMovieByWord(word).asObservable().retry(4).subscribe(
+                onNext: { responseSearchMovies in
+                    self.output.isLoading.accept(false)
+                    
+                    self.output.movies.accept(responseSearchMovies.results)
+                    
+            }, onError: { error in
+                self.output.isLoading.accept(false)
+                self.output.errorMessage.accept(self.getErrorValue(error))
+                
+                
+            }).disposed(by: self.disposeBag)
+        }catch {
+            self.output.isLoading.accept(false)
+            self.output.errorMessage.accept(error.localizedDescription)
+        }
+    }
+
     
     func getErrorValue(_ error: Error) -> String {
         
