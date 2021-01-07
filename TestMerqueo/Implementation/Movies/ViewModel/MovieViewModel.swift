@@ -17,6 +17,7 @@ class MovieViewModel {
     struct Output {
         
         var isLoading = BehaviorRelay(value: false)
+        var movies = BehaviorRelay<[Movie]?>(value: nil)
         var errorMessage = BehaviorRelay<String?>(value: nil)
         var notTokenMessage = BehaviorRelay<String?>(value: nil)
 
@@ -42,6 +43,9 @@ class MovieViewModel {
             try self.movieBL.getPopularMovies().asObservable().retry(4).subscribe(onNext: { popularMoviesResponse in
                 self.output.isLoading.accept(false)
                 
+                if let moviesSasfe = popularMoviesResponse.results, moviesSasfe.count > 0 {
+                    self.output.movies.accept(moviesSasfe)
+                }
                 
                 
             }, onError: { error in

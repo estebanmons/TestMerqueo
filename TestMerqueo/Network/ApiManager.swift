@@ -9,7 +9,6 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-//MARK: ManagerObservable class
 public class ApiManagerObservable {
     
     private lazy var jsonDecoder = JSONDecoder()
