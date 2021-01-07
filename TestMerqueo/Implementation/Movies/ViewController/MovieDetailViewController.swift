@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SafariServices
 
 class MovieDetailViewController: BaseViewController {
     
@@ -29,6 +30,7 @@ class MovieDetailViewController: BaseViewController {
     var idMovie = 0
     var movieDetail : MovieDetailResponse?
     var movieCredits : MovieCreditsResponse?
+    var cast = [Cast]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +71,38 @@ class MovieDetailViewController: BaseViewController {
             .subscribe(onNext: { movieCreditsResponse in
                 
                 if let movieCreditsSafe = movieCreditsResponse {
-                    self.movieCredits = movieCreditsSafe
+                    
+                    if let castSafe = movieCreditsSafe.cast {
+                        
+                        if castSafe.count > 20 {
+                            self.cast = Array(castSafe.prefix(20))
+                        } else {
+                            self.cast = castSafe
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.setCollectionView()
+                        }
+                    }
+                    
+                    if let crewSafe = movieCreditsSafe.crew {
+                        
+                        let director =  crewSafe.filter{ $0.job == "Director" }.first
+                        
+                        if let imageUrlString = director?.profilePath , let imageUrl = URL(string: "\(Constants.baseImageUrl)\(imageUrlString)") {
+                            self.directorImageView.sd_setImage(with: imageUrl, completed: nil)
+                        } else {
+                            DispatchQueue.main.async {
+                                self.directorImageView.image = #imageLiteral(resourceName: "ic_no_image")
+                            }
+                        }
+                        
+                        DispatchQueue.main.async {
+                            self.directorLabel.text = director?.name
+                        }
+                        
+                    }
+                    
                 }
                 
             }).disposed(by: disposeBag)
@@ -137,11 +170,34 @@ class MovieDetailViewController: BaseViewController {
         
     }
     
+    func setCollectionView() {
+        
+        castCollectionView.register(UINib(nibName: "CastCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "castCell")
+        castCollectionView.delegate = self
+        castCollectionView.dataSource = self
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.itemSize.height = 150.0
+        flowLayout.itemSize.width = 100.0
+        flowLayout.minimumLineSpacing = 10.0
+        
+        castCollectionView.collectionViewLayout = flowLayout
+        castCollectionView.translatesAutoresizingMaskIntoConstraints = false
+        castCollectionView.showsVerticalScrollIndicator = false
+        
+    }
+    
     
     
     @IBAction func goToWebAction(_ sender: UIButton) {
         
-        
+        if let urlString = movieDetail?.homepage, let url = URL(string: urlString) {
+            
+            let vc = SFSafariViewController(url: url)
+            
+            present(vc, animated: true)
+        }
         
     }
     
@@ -151,5 +207,31 @@ class MovieDetailViewController: BaseViewController {
         
     }
     
+    
+}
+
+extension MovieDetailViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cast.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "castCell", for: indexPath)
+
+        guard let cell = collectionViewCell as? CastCollectionViewCell else { return collectionViewCell }
+        
+        if let name = cast[indexPath.row].name, let imageMovie = cast[indexPath.row].profilePath {
+            cell.setCast(name, imageMovie)
+        }
+        
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100.0, height: 150.0)
+    }
     
 }
