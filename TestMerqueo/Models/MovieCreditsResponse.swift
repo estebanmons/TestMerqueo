@@ -8,9 +8,14 @@
 import Foundation
 
 // MARK: - Welcome
-struct MovieCreditsResponse: Codable {
+struct MovieCreditsResponse: Codable, Equatable {
+    
     let id: Int?
     let cast, crew: [Cast]?
+    
+    static func == (lhs: MovieCreditsResponse, rhs: MovieCreditsResponse) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
 // MARK: - Cast

@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - PopularMoviesResponse
-struct PopularMoviesResponse: Codable {
+struct PopularMoviesResponse: Codable , Equatable {
     let page: Int?
     let results: [Movie]?
     let totalPages, totalResults: Int?
@@ -18,10 +18,14 @@ struct PopularMoviesResponse: Codable {
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
+    
+    static func == (lhs: PopularMoviesResponse, rhs: PopularMoviesResponse) -> Bool {
+        lhs.page == rhs.page
+    }
 }
 
 // MARK: - Movie
-struct Movie: Codable {
+struct Movie: Codable, Equatable {
     let adult: Bool?
     let backdropPath: String?
     let genreIDS: [Int]?
@@ -46,5 +50,9 @@ struct Movie: Codable {
         case title, video
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
+    }
+    
+    static func == (lhs: Movie, rhs: Movie) -> Bool {
+        lhs.id == rhs.id
     }
 }

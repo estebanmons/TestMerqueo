@@ -8,7 +8,8 @@
 import Foundation
 
 // MARK: - Welcome
-struct MovieDetailResponse: Codable {
+struct MovieDetailResponse: Codable, Equatable {
+    
     let adult: Bool?
     let backdropPath: String?
     let belongsToCollection: BelongsToCollection?
@@ -48,6 +49,11 @@ struct MovieDetailResponse: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
+    
+    static func == (lhs: MovieDetailResponse, rhs: MovieDetailResponse) -> Bool {
+        lhs.id == rhs.id
+    }
+    
 }
 
 // MARK: - BelongsToCollection

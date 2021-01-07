@@ -18,6 +18,14 @@ class BaseViewController: UIViewController {
         
     }
     
+    func showAlert(title: String , message: String) {
+        alert(title: title, text: message)
+            .subscribe()
+            .disposed(by: disposeBag)
+        
+
+    }
+    
     func alert(title: String, text: String?) -> Completable {
         return Completable.create { [weak self] completable in
             let alertVC = UIAlertController(title: title, message: text, preferredStyle: .alert)
@@ -27,12 +35,6 @@ class BaseViewController: UIViewController {
             self?.present(alertVC, animated: true, completion: nil)
             return Disposables.create()
         }
-    }
-    
-    func showAlert(title:String , message:String) {
-        alert(title: title, text: message)
-            .subscribe()
-            .disposed(by: disposeBag)
     }
 
 }

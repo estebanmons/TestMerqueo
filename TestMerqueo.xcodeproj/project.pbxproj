@@ -16,8 +16,7 @@
 		F9255E0F25A56167003E35AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9255E0D25A56167003E35AB /* Main.storyboard */; };
 		F9255E1125A56168003E35AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9255E1025A56168003E35AB /* Assets.xcassets */; };
 		F9255E1425A56168003E35AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9255E1225A56168003E35AB /* LaunchScreen.storyboard */; };
-		F9255E1F25A56168003E35AB /* TestMerqueoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E1E25A56168003E35AB /* TestMerqueoTests.swift */; };
-		F9255E2A25A56168003E35AB /* TestMerqueoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */; };
+		F9255E1F25A56168003E35AB /* MovieViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E1E25A56168003E35AB /* MovieViewModelTest.swift */; };
 		F9255E5B25A570BE003E35AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E5A25A570BE003E35AB /* Constants.swift */; };
 		F9255E8825A57F65003E35AB /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E8725A57F65003E35AB /* MovieResponse.swift */; };
 		F9255E9125A58600003E35AB /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9255E9025A58600003E35AB /* ApiManager.swift */; };
@@ -30,23 +29,11 @@
 		F960E6F625A698A00018C3CA /* MovieCreditsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F960E6F525A698A00018C3CA /* MovieCreditsResponse.swift */; };
 		F9CCB4F725A63E9E00E54BC2 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9CCB4F525A63E9E00E54BC2 /* MovieCollectionViewCell.swift */; };
 		F9CCB4F825A63E9E00E54BC2 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9CCB4F625A63E9E00E54BC2 /* MovieCollectionViewCell.xib */; };
-		F9CCB54025A647F700E54BC2 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F9CCB53F25A647F700E54BC2 /* SDWebImage */; };
-		F9D5A90A25A595E5009D628F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90925A595E5009D628F /* RxSwift */; };
-		F9D5A90C25A595E5009D628F /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90B25A595E5009D628F /* RxTest */; };
-		F9D5A90E25A595E5009D628F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90D25A595E5009D628F /* RxRelay */; };
-		F9D5A91025A595E5009D628F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A90F25A595E5009D628F /* RxCocoa */; };
-		F9D5A91225A595E5009D628F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = F9D5A91125A595E5009D628F /* RxBlocking */; };
+		F9E4D3C225A7779700BD1B90 /* TestMerqueoPackage in Frameworks */ = {isa = PBXBuildFile; productRef = F9E4D3C125A7779700BD1B90 /* TestMerqueoPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F9255E1B25A56168003E35AB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F9255DFC25A56167003E35AB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9255E0325A56167003E35AB;
-			remoteInfo = TestMerqueo;
-		};
-		F9255E2625A56168003E35AB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F9255DFC25A56167003E35AB /* Project object */;
 			proxyType = 1;
@@ -68,11 +55,8 @@
 		F9255E1325A56168003E35AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9255E1525A56168003E35AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMerqueoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9255E1E25A56168003E35AB /* TestMerqueoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMerqueoTests.swift; sourceTree = "<group>"; };
+		F9255E1E25A56168003E35AB /* MovieViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModelTest.swift; sourceTree = "<group>"; };
 		F9255E2025A56168003E35AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9255E2525A56168003E35AB /* TestMerqueoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMerqueoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMerqueoUITests.swift; sourceTree = "<group>"; };
-		F9255E2B25A56168003E35AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9255E5A25A570BE003E35AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F9255E8725A57F65003E35AB /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		F9255E9025A58600003E35AB /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -85,6 +69,7 @@
 		F960E6F525A698A00018C3CA /* MovieCreditsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreditsResponse.swift; sourceTree = "<group>"; };
 		F9CCB4F525A63E9E00E54BC2 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9CCB4F625A63E9E00E54BC2 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
+		F9E4D3B325A7722A00BD1B90 /* TestMerqueoPackage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestMerqueoPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,23 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D5A91025A595E5009D628F /* RxCocoa in Frameworks */,
-				F9D5A90E25A595E5009D628F /* RxRelay in Frameworks */,
-				F9CCB54025A647F700E54BC2 /* SDWebImage in Frameworks */,
-				F9D5A90A25A595E5009D628F /* RxSwift in Frameworks */,
+				F9E4D3C225A7779700BD1B90 /* TestMerqueoPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F9255E1725A56168003E35AB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9D5A90C25A595E5009D628F /* RxTest in Frameworks */,
-				F9D5A91225A595E5009D628F /* RxBlocking in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E2225A56168003E35AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,10 +102,11 @@
 		F9255DFB25A56167003E35AB = {
 			isa = PBXGroup;
 			children = (
+				F9E4D3B325A7722A00BD1B90 /* TestMerqueoPackage */,
 				F9255E0625A56167003E35AB /* TestMerqueo */,
 				F9255E1D25A56168003E35AB /* TestMerqueoTests */,
-				F9255E2825A56168003E35AB /* TestMerqueoUITests */,
 				F9255E0525A56167003E35AB /* Products */,
+				F9E4D3AF25A770D400BD1B90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,7 +115,6 @@
 			children = (
 				F9255E0425A56167003E35AB /* TestMerqueo.app */,
 				F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */,
-				F9255E2525A56168003E35AB /* TestMerqueoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,19 +136,10 @@
 		F9255E1D25A56168003E35AB /* TestMerqueoTests */ = {
 			isa = PBXGroup;
 			children = (
-				F9255E1E25A56168003E35AB /* TestMerqueoTests.swift */,
 				F9255E2025A56168003E35AB /* Info.plist */,
+				F9255E1E25A56168003E35AB /* MovieViewModelTest.swift */,
 			);
 			path = TestMerqueoTests;
-			sourceTree = "<group>";
-		};
-		F9255E2825A56168003E35AB /* TestMerqueoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F9255E2925A56168003E35AB /* TestMerqueoUITests.swift */,
-				F9255E2B25A56168003E35AB /* Info.plist */,
-			);
-			path = TestMerqueoUITests;
 			sourceTree = "<group>";
 		};
 		F9255E4325A56B78003E35AB /* Implementation */ = {
@@ -289,6 +253,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		F9E4D3AF25A770D400BD1B90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,10 +277,7 @@
 			);
 			name = TestMerqueo;
 			packageProductDependencies = (
-				F9D5A90925A595E5009D628F /* RxSwift */,
-				F9D5A90D25A595E5009D628F /* RxRelay */,
-				F9D5A90F25A595E5009D628F /* RxCocoa */,
-				F9CCB53F25A647F700E54BC2 /* SDWebImage */,
+				F9E4D3C125A7779700BD1B90 /* TestMerqueoPackage */,
 			);
 			productName = TestMerqueo;
 			productReference = F9255E0425A56167003E35AB /* TestMerqueo.app */;
@@ -330,30 +298,10 @@
 			);
 			name = TestMerqueoTests;
 			packageProductDependencies = (
-				F9D5A90B25A595E5009D628F /* RxTest */,
-				F9D5A91125A595E5009D628F /* RxBlocking */,
 			);
 			productName = TestMerqueoTests;
 			productReference = F9255E1A25A56168003E35AB /* TestMerqueoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F9255E2425A56168003E35AB /* TestMerqueoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9255E3425A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueoUITests" */;
-			buildPhases = (
-				F9255E2125A56168003E35AB /* Sources */,
-				F9255E2225A56168003E35AB /* Frameworks */,
-				F9255E2325A56168003E35AB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F9255E2725A56168003E35AB /* PBXTargetDependency */,
-			);
-			name = TestMerqueoUITests;
-			productName = TestMerqueoUITests;
-			productReference = F9255E2525A56168003E35AB /* TestMerqueoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -371,10 +319,6 @@
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = F9255E0325A56167003E35AB;
 					};
-					F9255E2425A56168003E35AB = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = F9255E0325A56167003E35AB;
-					};
 				};
 			};
 			buildConfigurationList = F9255DFF25A56167003E35AB /* Build configuration list for PBXProject "TestMerqueo" */;
@@ -387,8 +331,6 @@
 			);
 			mainGroup = F9255DFB25A56167003E35AB;
 			packageReferences = (
-				F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */,
-				F9CCB53E25A647F700E54BC2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = F9255E0525A56167003E35AB /* Products */;
 			projectDirPath = "";
@@ -396,7 +338,6 @@
 			targets = (
 				F9255E0325A56167003E35AB /* TestMerqueo */,
 				F9255E1925A56168003E35AB /* TestMerqueoTests */,
-				F9255E2425A56168003E35AB /* TestMerqueoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,13 +356,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F9255E1825A56168003E35AB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E2325A56168003E35AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,15 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9255E1F25A56168003E35AB /* TestMerqueoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F9255E2125A56168003E35AB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9255E2A25A56168003E35AB /* TestMerqueoUITests.swift in Sources */,
+				F9255E1F25A56168003E35AB /* MovieViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,11 +403,6 @@
 			isa = PBXTargetDependency;
 			target = F9255E0325A56167003E35AB /* TestMerqueo */;
 			targetProxy = F9255E1B25A56168003E35AB /* PBXContainerItemProxy */;
-		};
-		F9255E2725A56168003E35AB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9255E0325A56167003E35AB /* TestMerqueo */;
-			targetProxy = F9255E2625A56168003E35AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -542,6 +463,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -603,6 +525,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -705,46 +628,6 @@
 			};
 			name = Release;
 		};
-		F9255E3525A56168003E35AB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX27675N9Y;
-				INFOPLIST_FILE = TestMerqueoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestMerqueo;
-			};
-			name = Debug;
-		};
-		F9255E3625A56168003E35AB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SX27675N9Y;
-				INFOPLIST_FILE = TestMerqueoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmonsalvee.TestMerqueoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestMerqueo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -775,66 +658,12 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F9255E3425A56168003E35AB /* Build configuration list for PBXNativeTarget "TestMerqueoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9255E3525A56168003E35AB /* Debug */,
-				F9255E3625A56168003E35AB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		F9CCB53E25A647F700E54BC2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.10.2;
-			};
-		};
-		F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		F9CCB53F25A647F700E54BC2 /* SDWebImage */ = {
+		F9E4D3C125A7779700BD1B90 /* TestMerqueoPackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F9CCB53E25A647F700E54BC2 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		F9D5A90925A595E5009D628F /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		F9D5A90B25A595E5009D628F /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-		F9D5A90D25A595E5009D628F /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		F9D5A90F25A595E5009D628F /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		F9D5A91125A595E5009D628F /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F9D5A90825A595E5009D628F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
+			productName = TestMerqueoPackage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
