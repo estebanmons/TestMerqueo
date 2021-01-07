@@ -20,6 +20,8 @@ class PopularMoviesViewController: UIViewController {
     var estimateWidth = 160.0
     var estimatedHeight = 220.0
     var cellMarginSize = 10.0
+    
+    let movieCell = "movieCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +68,7 @@ class PopularMoviesViewController: UIViewController {
     
     func setCollectionView() {
         
-        moviesCollectionView.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "movieCell")
+        moviesCollectionView.register(UINib(nibName: "MovieCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: movieCell)
         moviesCollectionView.delegate = self
         moviesCollectionView.dataSource = self
         
@@ -75,7 +77,6 @@ class PopularMoviesViewController: UIViewController {
         flowLayout.itemSize.height = 170.0
         flowLayout.itemSize.width = (moviesCollectionView.frame.size.width - CGFloat(20)) / CGFloat(3)
         flowLayout.minimumLineSpacing = 10.0
-        flowLayout.minimumInteritemSpacing = 10.0
         
         moviesCollectionView.collectionViewLayout = flowLayout
         moviesCollectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -95,7 +96,7 @@ extension PopularMoviesViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "movieCell", for: indexPath)
+        let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: movieCell, for: indexPath)
 
         guard let cell = collectionViewCell as? MovieCollectionViewCell else { return collectionViewCell }
         
@@ -110,7 +111,7 @@ extension PopularMoviesViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = (moviesCollectionView.frame.size.width - CGFloat(20)) / CGFloat(3)
-        return CGSize(width:size, height: 160.0)
+        return CGSize(width:size, height: 170.0)
     }
     
 }
