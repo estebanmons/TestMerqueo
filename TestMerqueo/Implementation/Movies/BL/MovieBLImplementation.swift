@@ -16,8 +16,8 @@ class MovieBLImplementation : MovieBL {
         self.movieRepository = movieRepository
     }
     
-    func getPopularMovies() throws -> Observable<PopularMoviesResponse> {
-        return try movieRepository.getPopularMovies().asObservable().flatMap({
+    func getPopularMovies(_ page: Int) throws -> Observable<PopularMoviesResponse> {
+        return try movieRepository.getPopularMovies(page).asObservable().flatMap({
             response -> Observable<PopularMoviesResponse> in
             return Observable.just(response)
         })

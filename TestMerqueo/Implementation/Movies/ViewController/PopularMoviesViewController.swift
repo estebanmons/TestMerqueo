@@ -12,16 +12,18 @@ import RxCocoa
 class PopularMoviesViewController: BaseViewController {
     
     @IBOutlet weak var moviesCollectionView: UICollectionView!
+    @IBOutlet weak var topButton: UIButton!
+    
     
     var movies = [Movie]()
     let movieViewModel = MovieViewModel()
     private let disposeBag = DisposeBag()
     
-    var estimateWidth = 160.0
-    var estimatedHeight = 220.0
-    var cellMarginSize = 10.0
-    
     let movieCell = "movieCell"
+    
+    var page = 1
+    var isMoreAvailable = false
+    var isLoading = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,10 @@ class PopularMoviesViewController: BaseViewController {
         setNavigationItem()
         setCollectionView()
         bindViewModel()
-        movieViewModel.getPopularNovies()
+        movieViewModel.getPopularMovies(page)
+        
+        topButton.layer.cornerRadius = topButton.frame.height/2
+        topButton.clipsToBounds = true
         
     }
     
@@ -44,14 +49,40 @@ class PopularMoviesViewController: BaseViewController {
         movieViewModel.output.isLoading.asObservable()
             .subscribe(onNext: { isloading in
                 if isloading{
-                    print(isloading)
+                    self.isLoading = isloading
                 }else{
-                    print(isloading)
+                    self.isLoading = isloading
+                }
+            }).disposed(by: disposeBag)
+        
+        movieViewModel.output.popularMovies.asObservable()
+            .subscribe(onNext: { popularMovies in
+                
+                
+                if let popularMoviesSafe = popularMovies, let moviesSafe = popularMoviesSafe.results, moviesSafe.count > 0 {
+                    
+                    self.movies += moviesSafe
+        
+                    if let page = popularMoviesSafe.page, let totalPage = popularMoviesSafe.totalPages {
+                        if totalPage > page  {
+                            self.page += 1
+                            self.isMoreAvailable = true
+                        }
+                        
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.moviesCollectionView.reloadData()
+                        self.moviesCollectionView.layoutIfNeeded()
+                    }
+                    
                 }
             }).disposed(by: disposeBag)
         
         movieViewModel.output.movies.asObservable()
             .subscribe(onNext: { movies in
+                
+                
                 if let moviesSafe = movies, moviesSafe.count > 0 {
                     self.movies = moviesSafe
                     
@@ -99,6 +130,12 @@ class PopularMoviesViewController: BaseViewController {
         
     }
     
+    func doPaging() {
+        
+        self.movieViewModel.getPopularMovies(page)
+        
+    }
+    
     func goToMovieDetailView(_ idMovie: Int) {
         
         let movieDetailView = MovieDetailViewController.storyboardInstance()
@@ -111,6 +148,13 @@ class PopularMoviesViewController: BaseViewController {
         
         let searchMovieView = SearchMovieViewController.storyboardInstance()
         self.navigationController?.pushViewController(searchMovieView, animated: true)
+        
+    }
+    
+    
+    @IBAction func scrollToTopAction(_ sender: UIButton) {
+        
+        self.moviesCollectionView.scrollToTop(animated: true)
         
     }
     
@@ -151,4 +195,21 @@ extension PopularMoviesViewController: UICollectionViewDelegate, UICollectionVie
         return CGSize(width:size, height: 170.0)
     }
     
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if indexPath.row == self.movies.count - 2 && !self.isLoading {
+            if self.isMoreAvailable {
+                self.isLoading = true
+                self.doPaging()
+                self.topButton.isHidden = false
+            }
+        }
+    }
+    
+}
+
+extension UIScrollView {
+    func scrollToTop(animated: Bool) {
+        setContentOffset(CGPoint(x: 0, y: -contentInset.top), animated: animated)
+    }
 }

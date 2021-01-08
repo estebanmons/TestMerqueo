@@ -13,9 +13,9 @@ class MovieRepository {
     
   lazy var requestObservable = ApiManagerObservable(config: .default)
     
-    func getPopularMovies() throws -> Observable<PopularMoviesResponse> {
+    func getPopularMovies(_ page: Int) throws -> Observable<PopularMoviesResponse> {
         
-        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=1")!)
+        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=\(page)")!)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

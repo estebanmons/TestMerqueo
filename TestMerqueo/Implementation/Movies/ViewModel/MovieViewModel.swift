@@ -22,6 +22,7 @@ class MovieViewModel {
     struct Output {
         
         var isLoading = BehaviorRelay(value: false)
+        var popularMovies = BehaviorRelay<PopularMoviesResponse?>(value: nil)
         var movies = BehaviorRelay<[Movie]?>(value: nil)
         var movieDetail = BehaviorRelay<MovieDetailResponse?>(value: nil)
         var movieCredits = BehaviorRelay<MovieCreditsResponse?>(value: nil)
@@ -46,18 +47,15 @@ class MovieViewModel {
         self.movieBL = movieBL
     }
     
-    func getPopularNovies() {
+    func getPopularMovies(_ page: Int) {
         
         do{
             self.output.isLoading.accept(true)
             
-            try self.movieBL.getPopularMovies().asObservable().retry(4).subscribe(onNext: { popularMoviesResponse in
+            try self.movieBL.getPopularMovies(page).asObservable().retry(4).subscribe(onNext: { popularMoviesResponse in
                 self.output.isLoading.accept(false)
-                
-                if let moviesSafe = popularMoviesResponse.results, moviesSafe.count > 0 {
-                    self.output.movies.accept(moviesSafe)
-                }
-                
+    
+                self.output.popularMovies.accept(popularMoviesResponse)
                 
             }, onError: { error in
                 self.output.isLoading.accept(false)
@@ -66,7 +64,7 @@ class MovieViewModel {
         }catch {
             self.output.isLoading.accept(false)
         }
-
+        
     }
     
     func getMovieDetail(_ movieId: Int) {

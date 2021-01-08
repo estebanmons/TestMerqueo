@@ -297,13 +297,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEG-Hj-gEk">
+                                <rect key="frame" x="344" y="764" width="30" height="30"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Opm-Fe-p4T"/>
+                                    <constraint firstAttribute="width" constant="30" id="ZzX-Zh-vbj"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="ic_top"/>
+                                <connections>
+                                    <action selector="scrollToTopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gst-Fq-Ub4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HF2-Cz-r1N" secondAttribute="bottom" id="GYB-vu-Ahv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEG-Hj-gEk" secondAttribute="trailing" constant="16" id="Lr4-FM-9pp"/>
                             <constraint firstItem="HF2-Cz-r1N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MYZ-xM-kq6"/>
                             <constraint firstItem="HF2-Cz-r1N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ST5-Ov-TV6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dEG-Hj-gEk" secondAttribute="bottom" constant="16" id="ZmU-YU-QgW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HF2-Cz-r1N" secondAttribute="trailing" id="ykO-2R-hvZ"/>
                         </constraints>
                     </view>
@@ -316,6 +331,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="moviesCollectionView" destination="HF2-Cz-r1N" id="uYD-8a-M9h"/>
+                        <outlet property="topButton" destination="dEG-Hj-gEk" id="WkQ-Sm-eJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -373,6 +389,7 @@
     </scenes>
     <resources>
         <image name="ic_close" width="30" height="30"/>
+        <image name="ic_top" width="21.333333969116211" height="21.333333969116211"/>
         <namedColor name="AccentColor">
             <color red="0.9179999828338623" green="0.20000000298023224" blue="0.84299999475479126" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
