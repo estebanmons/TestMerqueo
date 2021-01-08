@@ -208,6 +208,10 @@ class MovieDetailViewController: BaseViewController {
             vc.modalPresentationStyle = .overCurrentContext
             
             self.present(vc, animated: true)
+        } else {
+            self.alertWithHandler(title: Constants.warning, message: Constants.notHomePage) {
+            }
+            
         }
         
     }
@@ -233,10 +237,7 @@ extension MovieDetailViewController : UICollectionViewDelegate, UICollectionView
 
         guard let cell = collectionViewCell as? CastCollectionViewCell else { return collectionViewCell }
         
-        if let name = cast[indexPath.row].name, let imageMovie = cast[indexPath.row].profilePath {
-            cell.setCast(name, imageMovie)
-        }
-        
+        cell.setCast(cast[indexPath.row])
         
         return cell
     }

@@ -138,21 +138,21 @@ class MovieViewModel {
             switch errorSafe {
             
             case .authorizationError:
-                return "Error de autorización al tratar de realizar la petición."
+                return "Authorization error when trying to make the request."
                 
             case .connectionError:
-                return "Error de conexión a internet al tratar de realizar la petición."
+                return "Internet connection error when trying to make the request."
                 
             case .serverError:
-                return "Error del servidor al tratar de realizar la petición."
+                return "Server error trying to make the request."
                 
             case .unknownError:
-                return "Error desconocido al tratar de realizar la petición."
+                return "Unknown error trying to make the request."
             }
             
         }
         
-        return "Error desconocido al tratar de realizar la petición."
+        return "Unknown error trying to make the request."
         
     }
     

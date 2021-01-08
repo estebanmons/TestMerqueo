@@ -17,12 +17,22 @@ class CastCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setCast(_ name: String,_ urlStringImgage: String) {
+    func setCast(_ cast: Cast) {
         
-        nameCastLabel.text = name
+        if let name = cast.name {
+            DispatchQueue.main.async {
+                self.nameCastLabel.text = name
+            }
+        }
         
-        if let imageUrl = URL(string: "\(Constants.baseImageUrl)\(urlStringImgage)") {
+        if let imageString = cast.profilePath, let imageUrl = URL(string: "\(Constants.baseImageUrl)\(imageString)") {
             castImageView.sd_setImage(with: imageUrl, completed: nil)
+        } else {
+            DispatchQueue.main.async {
+                self.castImageView.image = #imageLiteral(resourceName: "ic_no_image")
+                self.castImageView.contentMode = .scaleAspectFit
+            }
+            
         }
         
     }
