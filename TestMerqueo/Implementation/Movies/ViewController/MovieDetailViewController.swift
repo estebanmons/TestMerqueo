@@ -50,15 +50,6 @@ class MovieDetailViewController: BaseViewController {
     
     func bindViewModel() {
         
-        movieViewModel.output.isLoading.asObservable()
-            .subscribe(onNext: { isloading in
-                if isloading{
-                    print(isloading)
-                }else{
-                    print(isloading)
-                }
-            }).disposed(by: disposeBag)
-        
         movieViewModel.output.movieDetail.asObservable()
             .subscribe(onNext: { movieDetailResponse in
                 
@@ -81,7 +72,9 @@ class MovieDetailViewController: BaseViewController {
             .subscribe(onNext: { errorMessage in
                 
                 if let errorMessageSafe = errorMessage {
-                    self.showAlert(title: "Advertencia", message: errorMessageSafe)
+                    self.alertWithHandler(title: Constants.warning, message: errorMessageSafe) {
+                        self.dismiss(animated: true, completion: nil)
+                    }
                 }
                 
             }).disposed(by: disposeBag)
@@ -90,7 +83,9 @@ class MovieDetailViewController: BaseViewController {
             .subscribe(onNext: { errorMessage in
                 
                 if let errorMessageSafe = errorMessage {
-                    self.showAlert(title: "Advertencia", message: errorMessageSafe)
+                    self.alertWithHandler(title: Constants.warning, message: errorMessageSafe) {
+                        self.dismiss(animated: true, completion: nil)
+                    }
                 }
                 
             }).disposed(by: disposeBag)
@@ -101,6 +96,11 @@ class MovieDetailViewController: BaseViewController {
         
         if let imageUrlString = movieDetail?.backdropPath ,let imageUrl = URL(string: "\(Constants.baseImageUrl)\(imageUrlString)") {
             backDropImageView.sd_setImage(with: imageUrl, completed: nil)
+        } else {
+            DispatchQueue.main.async {
+                self.backDropImageView.image = #imageLiteral(resourceName: "ic_no_image")
+                self.backDropImageView.contentMode = .scaleAspectFit
+            }
         }
         
         guard let title = movieDetail?.title else {

@@ -28,7 +28,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="239"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9L-Ps-obK">
-                                                <rect key="frame" x="374" y="223" width="0.0" height="0.0"/>
+                                                <rect key="frame" x="370" y="223" width="0.0" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                                             <constraint firstItem="X9L-Ps-obK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ACw-zx-0Jm" secondAttribute="leading" constant="20" symbolic="YES" id="C43-Nt-VOE"/>
                                             <constraint firstItem="ixC-TS-G2J" firstAttribute="top" secondItem="F7O-bD-9IR" secondAttribute="bottom" constant="32" id="Caa-Op-tRy"/>
                                             <constraint firstItem="zrJ-4q-HsU" firstAttribute="height" secondItem="ACw-zx-0Jm" secondAttribute="height" multiplier="0.238998" id="F4I-Gz-iso"/>
-                                            <constraint firstItem="X9L-Ps-obK" firstAttribute="trailing" secondItem="zrJ-4q-HsU" secondAttribute="trailing" constant="-16" id="FgL-qL-Ifg"/>
+                                            <constraint firstItem="X9L-Ps-obK" firstAttribute="trailing" secondItem="zrJ-4q-HsU" secondAttribute="trailing" constant="-20" id="FgL-qL-Ifg"/>
                                             <constraint firstItem="ehT-Tl-Bs5" firstAttribute="trailing" secondItem="5uO-OY-v3X" secondAttribute="trailing" id="HiU-8Q-nbV"/>
                                             <constraint firstItem="mwg-I2-A9N" firstAttribute="trailing" secondItem="TL3-hf-GoN" secondAttribute="trailing" id="HpM-8z-QgO"/>
                                             <constraint firstItem="WOg-U8-xNU" firstAttribute="trailing" secondItem="mwg-I2-A9N" secondAttribute="trailing" id="IDr-Yn-1FC"/>

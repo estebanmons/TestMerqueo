@@ -82,7 +82,7 @@ class SearchMovieViewController: UITableViewController {
             .subscribe(onNext: { errorMessage in
                 
                 if let errorMessageSafe = errorMessage {
-                    self.showAlert(title: "Advertencia", message: errorMessageSafe)
+                    self.showAlert(title: Constants.warning, message: errorMessageSafe)
                 }
                 
             }).disposed(by: disposeBag)
@@ -91,11 +91,13 @@ class SearchMovieViewController: UITableViewController {
     }
     
     func showAlert(title: String, message : String){
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+            let acceptAction = UIAlertAction(title: Constants.accept, style: .default, handler: nil)
+            alert.addAction(acceptAction)
+            self.present(alert, animated: true, completion: nil)
+        }
         
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        let acceptAction = UIAlertAction(title: "Aceptar", style: .default, handler: nil)
-        alert.addAction(acceptAction)
-        self.present(alert, animated: true, completion: nil)
     }
 
 

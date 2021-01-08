@@ -10,7 +10,6 @@ import XCTest
 import RxSwift
 import RxCocoa
 import RxTest
-import RxCocoaRuntime
 
 class MovieViewModelTest: XCTestCase {
     
@@ -26,16 +25,16 @@ class MovieViewModelTest: XCTestCase {
         super.tearDown()
     }
     
-    func testSuccessGetPopularNovies(){
+    func testSuccessGetPopularMovies(){
         self.movieViewModel = MovieViewModel(movieBL: successMovieBL())
-        let observer = scheduler.createObserver([Movie]?.self)
-        self.movieViewModel.output.movies.asDriver().drive(observer).disposed(by : disposeBag)
+        let observer = scheduler.createObserver(PopularMoviesResponse?.self)
+        self.movieViewModel.output.popularMovies.asDriver().drive(observer).disposed(by : disposeBag)
         scheduler.start()
         
-        movieViewModel.getPopularNovies()
+        movieViewModel.getPopularMovies(1)
         
-        let expectedResult1 : [Movie]? = nil
-        let expectedResult2 : [Movie]? = createMockPopularMovies().results
+        let expectedResult1 : PopularMoviesResponse? = nil
+        let expectedResult2 : PopularMoviesResponse? = createMockPopularMovies()
         let expectedEvents = [
             Recorded.next(0,expectedResult1),
             Recorded.next(0, expectedResult2)
@@ -44,13 +43,13 @@ class MovieViewModelTest: XCTestCase {
         XCTAssertEqual(observer.events, expectedEvents)
     }
     
-    func testFailureGetPopularNovies(){
+    func testFailureGetPopularMovies(){
         self.movieViewModel = MovieViewModel(movieBL: failureMovieBL())
         let observer = scheduler.createObserver(String?.self)
         self.movieViewModel.output.errorMessage.asDriver().drive(observer).disposed(by : disposeBag)
         scheduler.start()
         
-        movieViewModel.getPopularNovies()
+        movieViewModel.getPopularMovies(1)
         
         let expectedResult1 : String? = nil
         let expectedResult2 : String? = "Error desconocido al tratar de realizar la petición."
@@ -133,12 +132,47 @@ class MovieViewModelTest: XCTestCase {
         
         XCTAssertEqual(observer.events, expectedEvents)
     }
+    
+    func testSuccessGetMovieByWords(){
+        self.movieViewModel = MovieViewModel(movieBL: successMovieBL())
+        let observer = scheduler.createObserver([Movie]?.self)
+        self.movieViewModel.output.movies.asDriver().drive(observer).disposed(by : disposeBag)
+        scheduler.start()
+        
+        movieViewModel.getMovieByWord("Test")
+        
+        let expectedResult1 : [Movie]? = nil
+        let expectedResult2 : [Movie]? = createMockPopularMovies().results
+        let expectedEvents = [
+            Recorded.next(0,expectedResult1),
+            Recorded.next(0, expectedResult2)
+        ]
+        
+        XCTAssertEqual(observer.events, expectedEvents)
+    }
+    
+    func testFailureGetMovieByWord(){
+        self.movieViewModel = MovieViewModel(movieBL: failureMovieBL())
+        let observer = scheduler.createObserver(String?.self)
+        self.movieViewModel.output.errorMessage.asDriver().drive(observer).disposed(by : disposeBag)
+        scheduler.start()
+        
+        movieViewModel.getMovieByWord("Test")
+        
+        let expectedResult1 : String? = nil
+        let expectedResult2 : String? = "Error desconocido al tratar de realizar la petición."
+        let expectedEvents = [
+            Recorded.next(0,expectedResult1),
+            Recorded.next(0, expectedResult2)
+        ]
+        
+        XCTAssertEqual(observer.events, expectedEvents)
+    }
 
 }
 
 fileprivate class successMovieBL : MovieBL {
-    
-    func getPopularMovies() throws -> Observable<PopularMoviesResponse> {
+    func getPopularMovies(_ page: Int) throws -> Observable<PopularMoviesResponse> {
         return Observable.just(createMockPopularMovies())
     }
     
@@ -151,6 +185,10 @@ fileprivate class successMovieBL : MovieBL {
         return Observable.just(createMockMovieCredits())
     }
     
+    func getMovieByWord(_ word: String) throws -> Observable<PopularMoviesResponse> {
+        return Observable.just(createMockPopularMovies())
+    }
+    
 
 }
 
@@ -159,8 +197,7 @@ enum errorBL :  Error {
 }
 
 fileprivate class failureMovieBL : MovieBL {
-    
-    func getPopularMovies() throws -> Observable<PopularMoviesResponse> {
+    func getPopularMovies(_ page: Int) throws -> Observable<PopularMoviesResponse> {
         return Observable.error(errorBL.errorResponse)
     }
     
@@ -169,6 +206,10 @@ fileprivate class failureMovieBL : MovieBL {
     }
     
     func getMovieCredits(_ movieId: Int) throws -> Observable<MovieCreditsResponse> {
+        return Observable.error(errorBL.errorResponse)
+    }
+    
+    func getMovieByWord(_ word: String) throws -> Observable<PopularMoviesResponse> {
         return Observable.error(errorBL.errorResponse)
     }
     

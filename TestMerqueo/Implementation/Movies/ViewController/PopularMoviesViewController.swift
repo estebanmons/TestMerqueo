@@ -98,7 +98,9 @@ class PopularMoviesViewController: BaseViewController {
             .subscribe(onNext: { errorMessage in
                 
                 if let errorMessageSafe = errorMessage {
-                    self.showAlert(title: "Advertencia", message: errorMessageSafe)
+                    self.alertWithHandler(title: Constants.warning, message: errorMessageSafe) {
+                        self.movieViewModel.getPopularMovies(self.page)
+                    }
                 }
                 
             }).disposed(by: disposeBag)

@@ -15,7 +15,9 @@ class MovieRepository {
     
     func getPopularMovies(_ page: Int) throws -> Observable<PopularMoviesResponse> {
         
-        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=\(page)")!)
+        guard let urlSafe = URL(string:"\(Constants.baseUrl)movie/popular?api_key=\(Constants.apiKey)&language=en-US&page=\(page)") else { return Observable.error(RequestError.authorizationError)}
+        
+        var request = URLRequest(url: urlSafe)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -24,7 +26,10 @@ class MovieRepository {
     
     func getMovieDetail(_ movieId: Int) throws -> Observable<MovieDetailResponse> {
         
-        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/\(movieId)?api_key=\(Constants.apiKey)&language=en-US")!)
+        guard let urlSafe = URL(string:"\(Constants.baseUrl)movie/\(movieId)?api_key=\(Constants.apiKey)&language=en-US")  else {
+            return Observable.error(RequestError.authorizationError)}
+        
+        var request = URLRequest(url: urlSafe)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -33,7 +38,9 @@ class MovieRepository {
     
     func getMovieCredits(_ movieId: Int) throws -> Observable<MovieCreditsResponse> {
         
-        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)movie/\(movieId)/credits?api_key=\(Constants.apiKey)&language=en-US")!)
+        guard let urlSafe = URL(string:"\(Constants.baseUrl)movie/\(movieId)/credits?api_key=\(Constants.apiKey)&language=en-US") else { return Observable.error(RequestError.authorizationError)}
+        
+        var request = URLRequest(url: urlSafe)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -42,7 +49,11 @@ class MovieRepository {
     
     func getMovieByWord(_ word: String) throws -> Observable<PopularMoviesResponse> {
         
-        var request = URLRequest(url: URL(string:"\(Constants.baseUrl)search/movie?api_key=\(Constants.apiKey)&language=en-US&query=\(word)&page=1&include_adult=false")!)
+        guard let urlSafe = URL(string:"\(Constants.baseUrl)search/movie?api_key=\(Constants.apiKey)&language=en-US&query=\(word)&page=1&include_adult=false") else {
+            return Observable.error(RequestError.authorizationError)
+        }
+        
+        var request = URLRequest(url: urlSafe)
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         

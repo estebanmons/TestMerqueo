@@ -13,6 +13,9 @@ struct Constants {
     static let apiKey = "674d230726a9141a5e4cb7090e79aa8f"
     static let baseImageUrl = "https://image.tmdb.org/t/p/w500"
     
+    static let accept = "Aceptar"
+    static let warning = "Advertencia"
+    
 }
 
 enum RequestError: Error {

@@ -18,22 +18,15 @@ class BaseViewController: UIViewController {
         
     }
     
-    func showAlert(title: String , message: String) {
-        alert(title: title, text: message)
-            .subscribe()
-            .disposed(by: disposeBag)
+    func alertWithHandler(title:String ,message:String, completionHandler: @escaping () -> Void ) {
         
-
-    }
-    
-    func alert(title: String, text: String?) -> Completable {
-        return Completable.create { [weak self] completable in
-            let alertVC = UIAlertController(title: title, message: text, preferredStyle: .alert)
-            alertVC.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: {_ in
-                completable(.completed)
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { (alert) in
+                completionHandler()
             }))
-            self?.present(alertVC, animated: true, completion: nil)
-            return Disposables.create()
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
 
