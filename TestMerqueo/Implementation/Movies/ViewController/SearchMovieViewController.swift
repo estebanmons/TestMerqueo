@@ -38,7 +38,6 @@ class SearchMovieViewController: UITableViewController {
     
     func setNavigationItem() {
         self.navigationItem.title = "Search Movies"
-        self.navigationItem.hidesSearchBarWhenScrolling = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
@@ -49,6 +48,9 @@ class SearchMovieViewController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.searchBar.autocapitalizationType = .none
         searchController.searchBar.delegate = self
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        self.definesPresentationContext = true
         navigationItem.searchController = searchController
     }
     
